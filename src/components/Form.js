@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react';
 
 
 export default function Form(props) {
@@ -58,8 +58,8 @@ const handleExtraSpace = ()=>{
     </div>
     <div className='container my-3' style={{color:props.mode === "dark" ? "white" : "#042743"}}>
       <h4>Your text summary-</h4>
-      <p>{text.split("").filter((element)=>{return element.length !==0}).length} words and {text.length } characters</p>
-      <p>{0.008 * text.split(" ").filter((element)=>{return element.length !==0}).length} minutes in read</p>
+      <p>{text.split(/\s+/).filter((element)=>{return element.length !==0}).length} words and {text.length } characters</p>
+      <p>{0.008 * text.split("/\s+/ ").filter((element)=>{return element.length !==0}).length} minutes in read</p>
     </div>
     </>
   )
